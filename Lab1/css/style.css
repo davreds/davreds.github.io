@@ -1,0 +1,66 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0px;
+    background-color: #f1f0ee;
+}
+
+#exterior {
+    display: flex;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: scroll;
+}
+
+#sidebar {
+    background-color: #e0474c;
+    color: white;
+    text-shadow: 2px 2px #b11a21;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 30px;
+    align-items:flex-end;
+    height: 100%;
+    float: left;
+}
+
+.sideLink:link{
+        color: #7acfd6;
+}
+
+.sideLink:visited{
+        color: #7acfd6;
+}
+
+#mainblock {
+    float: left;
+    margin-left: 20px;
+    padding: 0;
+    width: 100%;
+    overflow: scroll;
+}
+
+.projects {
+    border-color: #7acfd6;
+    outline: none;
+}
+
+.projects > legend {
+    padding: 0px;
+    margin: 5px;
+    text-shadow: 2px 2px #7acfd6;
+    color: #e0474c
+}
+
+
+
+#photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    box-shadow: 2px 2px #b11a21;
+}
