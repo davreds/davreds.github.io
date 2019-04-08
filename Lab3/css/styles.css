@@ -1,7 +1,9 @@
 
 body {
+  background-color: black;
   font-family: 'Rubik', sans-serif;
   font-size: 13px;
+  color: white;
 }
 
 .container {
@@ -11,8 +13,11 @@ body {
 }
 
 h1 {
+  background: -webkit-linear-gradient(white, #b69859);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 5em;
 }
 
 
@@ -22,6 +27,7 @@ select {
   overflow: hidden;
   background: url(new_arrow.png) no-repeat right #ddd;
   border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 option {

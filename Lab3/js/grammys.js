@@ -25,7 +25,7 @@ $.ajax({
                         content += `<ul>`;
                         for( let k = 0; k < data.fields[i].categories[j].nominees.length; k++ ){
                             if( k == winner ){
-                                content += `<li><h4 class="winner">${data.fields[i].categories[j].nominees[k].nominee}</h4><h4><i>          WINNER!</i></h4></li>`;
+                                content += `<li><i><h4 class="winner">${data.fields[i].categories[j].nominees[k].nominee}</h4><h4>          WINNER!</h4></i></li>`;
                             } else{
                                 content += `<li><h4>${data.fields[i].categories[j].nominees[k].nominee}</h4></li>`;
                             }
