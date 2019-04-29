@@ -1,2 +1,2 @@
-db/mongoose.js,
-node_modules
+src/db/mongoose.js
+node_modules/
