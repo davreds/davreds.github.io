@@ -34,7 +34,7 @@ function updateTodo(id, completed) {
 
 function loadTodos() {
   $.ajax({
-    url: 'https://tuapp.herokuapp.com/todos',
+    url: 'https://final-exam-988.herokuapp.com/todos',
     headers: {
         'Content-Type':'application/json',
         'Authorization': 'Bearer ' + token
@@ -44,11 +44,13 @@ function loadTodos() {
     success: function(data){
       console.log(data)
 
+      let finished = document.getElementById('finished-list')
+      let unfinished = document.getElementById('unfinished-list')
+      finished.innerHTML = ''
+      unfinished.innerHTML = ''
       for( let i = 0; i < data.length; i++) {
-        // aqui va su código para agregar los elementos de la lista
-        console.log(data[i].description)
-        // algo asi:
-        // addTodo(data[i]._id, data[i].description, data[i].completed)
+        console.log(data[i])
+        addTodo(data[i]._id, data[i].description, data[i].completed, i)
       }
     },
     error: function(error_msg) {
@@ -95,8 +97,15 @@ input.addEventListener('keypress', function (event) {
     });
     input.value = '';
   }
+  loadTodos()
 })
 
-function addTodo(id, todoText, completed) {
-
+function addTodo(id, todoText, completed,count) {
+    if(completed){
+        let finished = document.getElementById('finished-list')
+        finished.innerHTML += '<li><input type="checkbox" name="todo" value="'+count+'" id="'+id+'" class="done"><span>'+todoText+'</span></li>\n'
+    } else{
+        let unfinished = document.getElementById('unfinished-list')
+        unfinished.innerHTML += '<li><input type="checkbox" name="todo" value="'+count+'" id="'+id+'"><span>'+todoText+'</span></li>\n'
+    }
 }
