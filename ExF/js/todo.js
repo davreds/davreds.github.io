@@ -103,7 +103,7 @@ input.addEventListener('keypress', function (event) {
 function addTodo(id, todoText, completed,count) {
     if(completed){
         let finished = document.getElementById('finished-list')
-        finished.innerHTML += '<li><input type="checkbox" name="todo" value="'+count+'" id="'+id+'" class="done"><span>'+todoText+'</span></li>\n'
+        finished.innerHTML += '<li><input type="checkbox" name="todo" value="'+count+'" id="'+id+'"><span class="done">'+todoText+'</span></li>\n'
     } else{
         let unfinished = document.getElementById('unfinished-list')
         unfinished.innerHTML += '<li><input type="checkbox" name="todo" value="'+count+'" id="'+id+'"><span>'+todoText+'</span></li>\n'
